@@ -19,8 +19,9 @@ const rootRedusers = combineReducers({
 });
 
 const persistConfig = {
-  key: 'root',
+  key: 'contacts',
   storage,
+  blacklist: ['filter']
 };
 
 const persistedReduser = persistReducer(persistConfig, rootRedusers);
